@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="majormodule.css">
+
+</head>
+<body>
+    <div class="gameScreen"></div>
+    <div class="rectangle1"></div>
+    <div class="rectangle2"></div>
+    <div class="rectangle3"></div>
+    <div class="rectangle4"></div>
+    <div class="rectangle5"></div>
+
+
+    <div class="score">
+      <div class="computer_txt">COMPUTER</div>
+      <div class="computer_score_txt">SCORE</div>
+    
+      
+      <div class="your_txt">YOUR</div>
+      <div class="your_score_txt">SCORE</div>
+    </div>
+    
+    
+    <div class="computer_score"><p>0</p></div>
+    <div class="your_score"><p>0</p></div>
+    
+    <div class="rock-text">ROCK</div>
+    <div class="text paper-text">PAPER</div>
+    <div class="text scissors-text">SCISSORS</div>
+
+
+    <div class="lines"></div>
+    <div class="line line1"></div>
+    <div class="line line2"></div>
+    <div class="line line3"></div>
+  </div>
+
+
+    <div class="hands">
+        <div class="hand paper">
+          <img src="./figmaimages/paper.png" onclick="pickUserHand('paper')"/>
+        </div>
+        <div class="hand scissors">
+          <img src="./figmaimages/scissor.png" onclick="pickUserHand('scissors')"/>
+        </div>
+        <div class="hand rock">
+          <img src="./figmaimages/stone.png" onclick="pickUserHand('rock')"/>                        
+        </div>
+  </div>
+
+  <div class="contest">       
+    <div class="userhand">
+        <h1>YOU PICKED</h1>
+        <div class="handImageContainer">
+          <img id="userPickImage" src="./figmaimages/paper.png">
+        </div>
+    </div>
+    <div class="referee"> 
+        <div class="decision">
+          
+          <p class="decision-message win-message"> YOU WIN </p>
+          <p class="decision-message lose-message"> YOU LOST </p>
+          <p class="decision-message tie-message"> TIE UP </p>
+          <p class="against-pc-message">AGAINST PC</p>
+          
+          
+        </div>
+        <div class="newGame" onclick="restartGame()">PLAY AGAIN
+        </div>
+    </div>
+    <div class="computerhand">
+        <h1>PC PICKED</h1>
+        <div class="handImageContainer">
+          <img id="computerPickImage" src="./figmaimages/scissors.png">
+        </div>   
+    </div>       
+  </div>        
+</div>
+
+<div class="rules-btn" id="rulesButton">RULES</div>
+
+<div id="ruleChart" class="rule-chart hidden">
+  <h2>Game Rules</h2>
+  <ul>
+    <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+    <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+    <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time.</li>
+    <li>If both players lay down the same hand, each player lays down another hand.</li>
+  </ul>
+  <!-- Close Button -->
+  <button id="closeButton">X</button>
+</div>
+
+<div id="celebrationPage" class="celebration">
+  <img src="figmaimages/stars.png" alt="Stars" id="stars">
+  <img src="figmaimages/trophy.png" alt="Champion Trophy" id="trophy">
+  <div id="you-won" class="celebration-text">YOU WON THE GAME</div>
+  <div id="hurray" class="celebration-text">HURRAY!!</div>
+  <button id="play-again" class="play-again-btn">REPLAY</button>
+</div>
+
+
+<script src="majormodule.js"></script>
+</body>
+</html>
